@@ -8,10 +8,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-db.createTable();
+db.createTables();
 
 app.use('/api', route);
 
+const PORT =    5440;
 
-app.listen('5000', '0.0.0.0', console.log('http//kmldjslkf'));
+app.listen(PORT, '192.168.8.152', () => {
+    console.log(`Server running at http://192.168.8.152:${PORT}`);
+  });
 
